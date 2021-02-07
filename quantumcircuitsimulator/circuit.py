@@ -51,7 +51,7 @@ def get_operator(total_qubits, gate_unitary, target_qubits, params = None):
         # this does not yet handle the case for 'U3' without params, exception case
         if name == PARAMETRIC_GATE_NAME and params is not None:
             # replace the key for the angle 'lamda' to provent issue during eval() due to the Python keyword 'lambda'
-            params["lambda_angle"] = params.pop("lambda")
+            #params["lambda_angle"] = params.pop("lambda")
 
             # create a function that can operate on a matrix (numpy array) that evaluates trigonometric functions using
             # the values specified in the params dictionary
@@ -102,7 +102,7 @@ def run_program(initial_state, program, global_params=None):
     The globally defined paramters are applied to all gates that include such parameters names as values in their own parameters,
     e.g.
     for
-        { "gate": "u3", "params": { "theta": "global_1", "phi": "global_2", "lambda": -3.1415 }, "target": [0] }
+        { "gate": "u3", "params": { "theta": "global_1", "phi": "global_2", "lambda_angle": -3.1415 }, "target": [0] }
     the following global parameters can be applied
          { "global_1": 3.1415, "global_2": 1.5708 }
 

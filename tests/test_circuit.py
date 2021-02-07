@@ -96,7 +96,7 @@ def test_get_ground_state(num_qubits, expected):
         ),
         (
             # n=1 U3 on qubit 0
-            1, "U3", [0], { "theta": 3.1415, "phi": 1.5708, "lambda": -3.1415 },
+            1, "U3", [0], { "theta": 3.1415, "phi": 1.5708, "lambda_angle": -3.1415 },
             [
                 [0+0j, 1+0j],
                 [0+1j, 0+0j]
@@ -138,7 +138,7 @@ def test_get_operator(num_qubits, gate, target_qubits, params, expected):
             # Execute parametric gate
             np.array([1, 0]),
             [
-                { "gate": "u3", "params": { "theta": 3.1415, "phi": 1.5708, "lambda": -3.1415 }, "target": [0] }
+                { "gate": "u3", "params": { "theta": 3.1415, "phi": 1.5708, "lambda_angle": -3.1415 }, "target": [0] }
             ],
             None,
             np.array([ 0+0j, 0+1j])
@@ -147,7 +147,7 @@ def test_get_operator(num_qubits, gate, target_qubits, params, expected):
             # Execute parametric gate with global parameters
             np.array([1, 0]),
             [
-                { "gate": "u3", "params": { "theta": "global_1", "phi": "global_2", "lambda": -3.1415 }, "target": [0] }
+                { "gate": "u3", "params": { "theta": "global_1", "phi": "global_2", "lambda_angle": -3.1415 }, "target": [0] }
             ],
             { "global_1": 3.1415, "global_2": 1.5708 },
             np.array([ 0+0j, 0+1j])

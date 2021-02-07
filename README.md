@@ -68,7 +68,7 @@ U3      | CU3
 ## To-do:
 
 - [x] implement U3 gate
-- [ ] create variational algorithm from U3
+- [x] create variational algorithm from U3
 - [ ] implement universal operators
 - [ ] add typing to function/tests
 - [ ] use pytest-allclose instead of numpy.testing.allclose
