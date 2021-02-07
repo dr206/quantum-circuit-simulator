@@ -25,12 +25,13 @@ There are additional sets of requirements that can be summarised as:
 
 # Project structure
 
-This project contains a python module called `quantumcircuitsimulator` and can be found under a directory of the same name.
+This project contains a python package called **quantumcircuitsimulator** and can be found under the directory `./quantumcircuitsimulator`.
 
+Example usages of `quantumcircuitsimulator` can be found in example Jupyter notebooks, located in the directory `./jupyter`.
 
 # Usage & supported functionality
 
-To locally install `quantumcircuitsimulator`, from the root directory of this project execute:
+To locally install the `quantumcircuitsimulator` package, from the root directory of this project execute:
 ```
 pip install .
 ```
