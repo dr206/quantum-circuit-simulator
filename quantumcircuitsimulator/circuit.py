@@ -126,7 +126,7 @@ def run_program(initial_state, program, global_params=None):
         target = gate_application.get("target")
         params = gate_application.get("params")
 
-        if global_params != None:
+        if global_params != None and params != None:
             # when global parameters are present:
             # replace a gates reference to the global param with the value of that global param
             for angle, potential_global_param in params.items():
