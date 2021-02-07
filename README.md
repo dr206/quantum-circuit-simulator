@@ -23,15 +23,28 @@ There are additional sets of requirements that can be summarised as:
 * allow running variational quantum algorithms
 * universal operator function
 
+# Project structure
 
-# Usage & Supported functionality
+This project contains a python module called `quantumcircuitsimulator` and can be found under a directory of the same name.
 
-TBC
+
+# Usage & supported functionality
+
+To locally install `quantumcircuitsimulator`, from the root directory of this project execute:
+```
+pip install .
+```
+
+This will provide access to the following modules:
+* `utils`
+* `gates`
+* `circuit`
+* `experiment`
 
 
 ## To-do:
 
-- [ ] implement U3 gate
+- [x] implement U3 gate
 - [ ] create variational algorithm from U3
 - [ ] implement universal operators
 - [ ] add typing to function/tests
