@@ -13,3 +13,9 @@ def test_run_1000_shots():
     actual_result = get_counts(np.array([0.70710678, 0, 0, -0.70710678]), 1000)
     expected_result = pytest.approx({ "00": 500, "11": 500 }, rel=1e-1)
     assert actual_result == expected_result
+
+    
+def test_run_1000_shots_complex_amplitudes():
+    actual_result = get_counts(np.array([0.70710678+0.j, 0+0.j, 0+0.j, -0.70710678+0.j]), 1000)
+    expected_result = pytest.approx({ "00": 500, "11": 500 }, rel=1e-1)
+    assert actual_result == expected_result

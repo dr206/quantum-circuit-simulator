@@ -29,6 +29,10 @@ def measure_all(state_vector):
     # create probability distribution based on the state vectors amplitudes 
     probabilities = np.fromiter((get_probability(amplitude) for amplitude in state_vector), state_vector.dtype) 
 
+    # convert probabilities to real values, and normalise to account for rounding errors
+    probabilities = probabilities.astype('float64')
+    probabilities = probabilities / np.sum(probabilities)
+    
     # select a single state randonly based on a probability distribution
     # mark the resulting index for this state with a 1 
     result_array = np.random.multinomial(1, probabilities)
