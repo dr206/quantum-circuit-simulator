@@ -36,11 +36,33 @@ To locally install the `quantumcircuitsimulator` package, from the root director
 pip install .
 ```
 
-This will provide access to the following modules:
+This will provide access to the following modules/functions:
 * `utils`
+	* `log2`
 * `gates`
+	* `KNOWN_GATES`
+	* a selection of single qubit gates, ([see below](#supported-gates))
 * `circuit`
+	* `get_ground_state`
+	* `get_operator`
+	* `run_program`
 * `experiment`
+	* `measure_all`
+	* `get_counts`
+
+## Supported gates
+
+The following gates are supported:
+
+Single qubit | Two qubit
+------------ | -------------
+X       | CX
+Y       | CY
+Z       | CZ
+U3      | CU3
+\|0X0\| | C\|0X0\||
+\|1X1\| | C\|1X1\||
+
 
 
 ## To-do:
